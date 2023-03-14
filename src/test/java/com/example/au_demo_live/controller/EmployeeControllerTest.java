@@ -41,6 +41,7 @@ public class EmployeeControllerTest {
     @Test
     @DisplayName("/employees should return all employees")
     void testGetAllEmployees() throws Exception {
+        when(employeeService.getAllEmployees()).thenReturn(createMockEmployees());
         final var expected=new ObjectMapper().writeValueAsString(createMockEmployees());
         mockMvc.perform(get("/employees"))
                 .andExpect(status().isOk())

@@ -33,7 +33,7 @@ public class MockitoInjectMockAnnotationExample {
         assertEquals("Apple",mockList.get(0));
         assertEquals(1,mockList.size());
 
-        assertEquals("Apple",mockFruits.getNames());
+        assertEquals("Apple",mockFruits.getNames().get(0));
         assertEquals(1,mockFruits.getNames().size());
     }
 }
